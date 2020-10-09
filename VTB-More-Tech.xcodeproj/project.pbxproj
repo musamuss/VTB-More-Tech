@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D978B2A2530D738003D2CF7 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D978B292530D738003D2CF7 /* SwiftUIView.swift */; };
+		2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D978B2C2530D756003D2CF7 /* CarCollectionView.swift */; };
 		300996D964EEC805EC4AA20C /* Pods_VTB_More_Tech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BE45C01978B97BD0D9B397 /* Pods_VTB_More_Tech.framework */; };
 		84DB79AC2530AFF300B41C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AB2530AFF300B41C01 /* AppDelegate.swift */; };
 		84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D978B292530D738003D2CF7 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		2D978B2C2530D756003D2CF7 /* CarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionView.swift; sourceTree = "<group>"; };
 		5FD49936F2391F9031D079DB /* Pods-VTB-More-Tech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB-More-Tech.debug.xcconfig"; path = "Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech.debug.xcconfig"; sourceTree = "<group>"; };
 		836F3AE2905A4E32A5E2D986 /* Pods-VTB-More-Tech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB-More-Tech.release.xcconfig"; path = "Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech.release.xcconfig"; sourceTree = "<group>"; };
 		84DB79A82530AFF300B41C01 /* VTB-More-Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTB-More-Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D978B282530D703003D2CF7 /* CarCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2D978B292530D738003D2CF7 /* SwiftUIView.swift */,
+				2D978B2C2530D756003D2CF7 /* CarCollectionView.swift */,
+			);
+			path = CarCollectionView;
+			sourceTree = "<group>";
+		};
 		7947F27D0DBD752AD8ACE516 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 			children = (
 				A5077AD52530E98400666011 /* Models */,
 				A543E2A92530C88B0096C4F0 /* API.swift */,
+				2D978B282530D703003D2CF7 /* CarCollectionView */,
 				84DB79AB2530AFF300B41C01 /* AppDelegate.swift */,
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
 				84DB79AF2530AFF300B41C01 /* ViewController.swift */,
@@ -264,7 +278,9 @@
 				A5077AF72530E99B00666011 /* CarPhoto.swift in Sources */,
 				A543E2AA2530C88B0096C4F0 /* API.swift in Sources */,
 				A5077AEA2530E99B00666011 /* TransportType.swift in Sources */,
+				2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */,
 				84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */,
+				2D978B2A2530D738003D2CF7 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
