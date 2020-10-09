@@ -30,6 +30,7 @@ struct CarCollectionView: View {
                     .font(.system(size: 10, weight: .medium))
                     .foregroundColor(.white)
             }
+            .frame(width: 200, height: 115, alignment: .leading)
         }
         .frame(width: 217, height: 151)
     }
