@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,17 @@
 		84DB79B32530AFF300B41C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB79B12530AFF300B41C01 /* Main.storyboard */; };
 		84DB79B52530AFF700B41C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DB79B42530AFF700B41C01 /* Assets.xcassets */; };
 		84DB79B82530AFF700B41C01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB79B62530AFF700B41C01 /* LaunchScreen.storyboard */; };
+		A5077AEA2530E99B00666011 /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AD82530E99A00666011 /* TransportType.swift */; };
+		A5077AEC2530E99B00666011 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077ADA2530E99A00666011 /* Country.swift */; };
+		A5077AED2530E99B00666011 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077ADB2530E99A00666011 /* CarModel.swift */; };
+		A5077AEE2530E99B00666011 /* CarModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077ADC2530E99A00666011 /* CarModelType.swift */; };
+		A5077AEF2530E99B00666011 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077ADD2530E99A00666011 /* Car.swift */; };
+		A5077AF02530E99B00666011 /* SizePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077ADE2530E99A00666011 /* SizePhoto.swift */; };
+		A5077AF12530E99B00666011 /* CarRenderPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077ADF2530E99A00666011 /* CarRenderPhotos.swift */; };
+		A5077AF22530E99B00666011 /* CarPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE02530E99A00666011 /* CarPhotos.swift */; };
+		A5077AF62530E99B00666011 /* CarBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE42530E99B00666011 /* CarBody.swift */; };
+		A5077AF72530E99B00666011 /* CarPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE52530E99B00666011 /* CarPhoto.swift */; };
+		A5077AF92530E99B00666011 /* CarBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE72530E99B00666011 /* CarBrand.swift */; };
 		A543E2AA2530C88B0096C4F0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E2A92530C88B0096C4F0 /* API.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +40,17 @@
 		84DB79B72530AFF700B41C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DB79B92530AFF700B41C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92BE45C01978B97BD0D9B397 /* Pods_VTB_More_Tech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTB_More_Tech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5077AD82530E99A00666011 /* TransportType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
+		A5077ADA2530E99A00666011 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		A5077ADB2530E99A00666011 /* CarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		A5077ADC2530E99A00666011 /* CarModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelType.swift; sourceTree = "<group>"; };
+		A5077ADD2530E99A00666011 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		A5077ADE2530E99A00666011 /* SizePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePhoto.swift; sourceTree = "<group>"; };
+		A5077ADF2530E99A00666011 /* CarRenderPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarRenderPhotos.swift; sourceTree = "<group>"; };
+		A5077AE02530E99A00666011 /* CarPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhotos.swift; sourceTree = "<group>"; };
+		A5077AE42530E99B00666011 /* CarBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBody.swift; sourceTree = "<group>"; };
+		A5077AE52530E99B00666011 /* CarPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhoto.swift; sourceTree = "<group>"; };
+		A5077AE72530E99B00666011 /* CarBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBrand.swift; sourceTree = "<group>"; };
 		A543E2A92530C88B0096C4F0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +72,6 @@
 				5FD49936F2391F9031D079DB /* Pods-VTB-More-Tech.debug.xcconfig */,
 				836F3AE2905A4E32A5E2D986 /* Pods-VTB-More-Tech.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,6 +96,7 @@
 		84DB79AA2530AFF300B41C01 /* VTB-More-Tech */ = {
 			isa = PBXGroup;
 			children = (
+				A5077AD52530E98400666011 /* Models */,
 				A543E2A92530C88B0096C4F0 /* API.swift */,
 				84DB79AB2530AFF300B41C01 /* AppDelegate.swift */,
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
@@ -85,6 +107,24 @@
 				84DB79B92530AFF700B41C01 /* Info.plist */,
 			);
 			path = "VTB-More-Tech";
+			sourceTree = "<group>";
+		};
+		A5077AD52530E98400666011 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5077AE42530E99B00666011 /* CarBody.swift */,
+				A5077AE72530E99B00666011 /* CarBrand.swift */,
+				A5077ADA2530E99A00666011 /* Country.swift */,
+				A5077ADD2530E99A00666011 /* Car.swift */,
+				A5077AE02530E99A00666011 /* CarPhotos.swift */,
+				A5077ADC2530E99A00666011 /* CarModelType.swift */,
+				A5077ADB2530E99A00666011 /* CarModel.swift */,
+				A5077ADF2530E99A00666011 /* CarRenderPhotos.swift */,
+				A5077ADE2530E99A00666011 /* SizePhoto.swift */,
+				A5077AD82530E99A00666011 /* TransportType.swift */,
+				A5077AE52530E99B00666011 /* CarPhoto.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D5FD3CD1C4F0432C509E34CB /* Frameworks */ = {
@@ -106,6 +146,7 @@
 				84DB79A42530AFF300B41C01 /* Sources */,
 				84DB79A52530AFF300B41C01 /* Frameworks */,
 				84DB79A62530AFF300B41C01 /* Resources */,
+				706F99112BB5B5A4A73833F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +204,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		706F99112BB5B5A4A73833F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F385CF83951BDA87176CF75D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,9 +250,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5077AEE2530E99B00666011 /* CarModelType.swift in Sources */,
+				A5077AEC2530E99B00666011 /* Country.swift in Sources */,
 				84DB79B02530AFF300B41C01 /* ViewController.swift in Sources */,
+				A5077AEF2530E99B00666011 /* Car.swift in Sources */,
+				A5077AF22530E99B00666011 /* CarPhotos.swift in Sources */,
 				84DB79AC2530AFF300B41C01 /* AppDelegate.swift in Sources */,
+				A5077AF62530E99B00666011 /* CarBody.swift in Sources */,
+				A5077AED2530E99B00666011 /* CarModel.swift in Sources */,
+				A5077AF12530E99B00666011 /* CarRenderPhotos.swift in Sources */,
+				A5077AF92530E99B00666011 /* CarBrand.swift in Sources */,
+				A5077AF02530E99B00666011 /* SizePhoto.swift in Sources */,
+				A5077AF72530E99B00666011 /* CarPhoto.swift in Sources */,
 				A543E2AA2530C88B0096C4F0 /* API.swift in Sources */,
+				A5077AEA2530E99B00666011 /* TransportType.swift in Sources */,
 				84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
