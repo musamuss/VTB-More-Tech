@@ -10,6 +10,8 @@
 		2D978B2A2530D738003D2CF7 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D978B292530D738003D2CF7 /* SwiftUIView.swift */; };
 		2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D978B2C2530D756003D2CF7 /* CarCollectionView.swift */; };
 		300996D964EEC805EC4AA20C /* Pods_VTB_More_Tech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BE45C01978B97BD0D9B397 /* Pods_VTB_More_Tech.framework */; };
+		842ECBC52530D61200AF0886 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842ECBC42530D61200AF0886 /* CardView.swift */; };
+		842ECBC82530D65800AF0886 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842ECBC72530D65800AF0886 /* CardView.xib */; };
 		84DB79AC2530AFF300B41C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AB2530AFF300B41C01 /* AppDelegate.swift */; };
 		84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */; };
 		84DB79B02530AFF300B41C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AF2530AFF300B41C01 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 		2D978B2C2530D756003D2CF7 /* CarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionView.swift; sourceTree = "<group>"; };
 		5FD49936F2391F9031D079DB /* Pods-VTB-More-Tech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB-More-Tech.debug.xcconfig"; path = "Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech.debug.xcconfig"; sourceTree = "<group>"; };
 		836F3AE2905A4E32A5E2D986 /* Pods-VTB-More-Tech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB-More-Tech.release.xcconfig"; path = "Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech.release.xcconfig"; sourceTree = "<group>"; };
+		842ECBC42530D61200AF0886 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		842ECBC72530D65800AF0886 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		84DB79A82530AFF300B41C01 /* VTB-More-Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTB-More-Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB79AB2530AFF300B41C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		842ECBCA2530D66500AF0886 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				842ECBC42530D61200AF0886 /* CardView.swift */,
+				842ECBC72530D65800AF0886 /* CardView.xib */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 		84DB799F2530AFF300B41C01 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 				84DB79AB2530AFF300B41C01 /* AppDelegate.swift */,
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
 				84DB79AF2530AFF300B41C01 /* ViewController.swift */,
+				842ECBCA2530D66500AF0886 /* CardView */,
 				84DB79B12530AFF300B41C01 /* Main.storyboard */,
 				84DB79B42530AFF700B41C01 /* Assets.xcassets */,
 				84DB79B62530AFF700B41C01 /* LaunchScreen.storyboard */,
@@ -211,6 +225,7 @@
 			files = (
 				84DB79B82530AFF700B41C01 /* LaunchScreen.storyboard in Resources */,
 				84DB79B52530AFF700B41C01 /* Assets.xcassets in Resources */,
+				842ECBC82530D65800AF0886 /* CardView.xib in Resources */,
 				84DB79B32530AFF300B41C01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +296,7 @@
 				2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */,
 				84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */,
 				2D978B2A2530D738003D2CF7 /* SwiftUIView.swift in Sources */,
+				842ECBC52530D61200AF0886 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
