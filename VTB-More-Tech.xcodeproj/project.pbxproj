@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300996D964EEC805EC4AA20C /* Pods_VTB_More_Tech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BE45C01978B97BD0D9B397 /* Pods_VTB_More_Tech.framework */; };
 		84DB79AC2530AFF300B41C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AB2530AFF300B41C01 /* AppDelegate.swift */; };
 		84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */; };
 		84DB79B02530AFF300B41C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB79AF2530AFF300B41C01 /* ViewController.swift */; };
 		84DB79B32530AFF300B41C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB79B12530AFF300B41C01 /* Main.storyboard */; };
 		84DB79B52530AFF700B41C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DB79B42530AFF700B41C01 /* Assets.xcassets */; };
 		84DB79B82530AFF700B41C01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB79B62530AFF700B41C01 /* LaunchScreen.storyboard */; };
+		A543E2AA2530C88B0096C4F0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E2A92530C88B0096C4F0 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FD49936F2391F9031D079DB /* Pods-VTB-More-Tech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB-More-Tech.debug.xcconfig"; path = "Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech.debug.xcconfig"; sourceTree = "<group>"; };
+		836F3AE2905A4E32A5E2D986 /* Pods-VTB-More-Tech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB-More-Tech.release.xcconfig"; path = "Target Support Files/Pods-VTB-More-Tech/Pods-VTB-More-Tech.release.xcconfig"; sourceTree = "<group>"; };
 		84DB79A82530AFF300B41C01 /* VTB-More-Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTB-More-Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB79AB2530AFF300B41C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		84DB79B42530AFF700B41C01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DB79B72530AFF700B41C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DB79B92530AFF700B41C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BE45C01978B97BD0D9B397 /* Pods_VTB_More_Tech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTB_More_Tech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A543E2A92530C88B0096C4F0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300996D964EEC805EC4AA20C /* Pods_VTB_More_Tech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7947F27D0DBD752AD8ACE516 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FD49936F2391F9031D079DB /* Pods-VTB-More-Tech.debug.xcconfig */,
+				836F3AE2905A4E32A5E2D986 /* Pods-VTB-More-Tech.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84DB799F2530AFF300B41C01 = {
 			isa = PBXGroup;
 			children = (
 				84DB79AA2530AFF300B41C01 /* VTB-More-Tech */,
 				84DB79A92530AFF300B41C01 /* Products */,
+				7947F27D0DBD752AD8ACE516 /* Pods */,
+				D5FD3CD1C4F0432C509E34CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +75,7 @@
 		84DB79AA2530AFF300B41C01 /* VTB-More-Tech */ = {
 			isa = PBXGroup;
 			children = (
+				A543E2A92530C88B0096C4F0 /* API.swift */,
 				84DB79AB2530AFF300B41C01 /* AppDelegate.swift */,
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
 				84DB79AF2530AFF300B41C01 /* ViewController.swift */,
@@ -67,6 +87,14 @@
 			path = "VTB-More-Tech";
 			sourceTree = "<group>";
 		};
+		D5FD3CD1C4F0432C509E34CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92BE45C01978B97BD0D9B397 /* Pods_VTB_More_Tech.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DB79BC2530AFF700B41C01 /* Build configuration list for PBXNativeTarget "VTB-More-Tech" */;
 			buildPhases = (
+				F385CF83951BDA87176CF75D /* [CP] Check Pods Manifest.lock */,
 				84DB79A42530AFF300B41C01 /* Sources */,
 				84DB79A52530AFF300B41C01 /* Frameworks */,
 				84DB79A62530AFF300B41C01 /* Resources */,
@@ -133,6 +162,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F385CF83951BDA87176CF75D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VTB-More-Tech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84DB79A42530AFF300B41C01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +194,7 @@
 			files = (
 				84DB79B02530AFF300B41C01 /* ViewController.swift in Sources */,
 				84DB79AC2530AFF300B41C01 /* AppDelegate.swift in Sources */,
+				A543E2AA2530C88B0096C4F0 /* API.swift in Sources */,
 				84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +337,7 @@
 		};
 		84DB79BD2530AFF700B41C01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FD49936F2391F9031D079DB /* Pods-VTB-More-Tech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +356,7 @@
 		};
 		84DB79BE2530AFF700B41C01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 836F3AE2905A4E32A5E2D986 /* Pods-VTB-More-Tech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
