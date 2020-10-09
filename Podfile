@@ -6,5 +6,6 @@ target 'VTB-More-Tech' do
   use_frameworks!
 
   # Pods for VTB-More-Tech
-
+  pod 'Alamofire'
+  
 end
