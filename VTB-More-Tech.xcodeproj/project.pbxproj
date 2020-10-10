@@ -150,17 +150,17 @@
 		A5077AD52530E98400666011 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A5077ADD2530E99A00666011 /* Car.swift */,
 				A5077AE42530E99B00666011 /* CarBody.swift */,
 				A5077AE72530E99B00666011 /* CarBrand.swift */,
-				A5077ADA2530E99A00666011 /* Country.swift */,
-				A5077ADD2530E99A00666011 /* Car.swift */,
-				A5077AE02530E99A00666011 /* CarPhotos.swift */,
-				A5077ADC2530E99A00666011 /* CarModelType.swift */,
 				A5077ADB2530E99A00666011 /* CarModel.swift */,
+				A5077ADC2530E99A00666011 /* CarModelType.swift */,
+				A5077AE52530E99B00666011 /* CarPhoto.swift */,
+				A5077AE02530E99A00666011 /* CarPhotos.swift */,
 				A5077ADF2530E99A00666011 /* CarRenderPhotos.swift */,
+				A5077ADA2530E99A00666011 /* Country.swift */,
 				A5077ADE2530E99A00666011 /* SizePhoto.swift */,
 				A5077AD82530E99A00666011 /* TransportType.swift */,
-				A5077AE52530E99B00666011 /* CarPhoto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

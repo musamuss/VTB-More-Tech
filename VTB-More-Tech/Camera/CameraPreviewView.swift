@@ -12,6 +12,8 @@ import SwiftUI
 import UIKit
 
 struct CameraPreview: UIViewRepresentable {
+    @Binding var photo: UIImage?
+
     func makeUIView(context: Context) -> CameraPreviewView {
         CameraPreviewView()
     }
