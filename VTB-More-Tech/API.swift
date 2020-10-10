@@ -10,10 +10,50 @@ import Alamofire
 import UIKit
 import Combine
 
+enum APIError: Error {
+    case apiError
+}
+
+typealias CarInfo = (car: Car, choosedModel: CarModel)
+
 class API {
     static let current = API()
+    
+    // MARK: Publishers
+    
+    func carModelName(from image: UIImage) -> Future<[String: Double], APIError> {
+
+        let future = Future<[String: Double], APIError> { [unowned self] promise in
+            self.recognizeCarModelName(from: image) { propabilities in
+                if propabilities.isEmpty {
+                    promise(.failure(.apiError))
+                } else {
+                    promise(.success(propabilities))
+                }
+            }
+        }
         
-    func recognizeCar(from image: UIImage, completion: @escaping ([String: Double]) -> Void) {
+        return future
+    }
+    
+    func carInfo(for modelName: String) -> Future<CarInfo, APIError> {
+        
+        let future = Future<CarInfo, APIError> { [unowned self] promise in
+            self.getCarInfo(for: modelName) { carInfo in
+                if let carInfo = carInfo {
+                    promise(.success(carInfo))
+                } else {
+                    promise(.failure(.apiError))
+                }
+            }
+        }
+        
+        return future
+    }
+    
+    // MARK: API Methods
+    
+    func recognizeCarModelName(from image: UIImage, completion: @escaping ([String: Double]) -> Void) {
         guard let base64Image = image.jpegData(compressionQuality: 0.25)?.base64EncodedData(options: .endLineWithLineFeed),
               let base64String = String(data: base64Image, encoding: .utf8) else {
             completion([:])
@@ -42,7 +82,7 @@ class API {
         }
     }
     
-    func getCar(for modelName: String, completion: @escaping ((car: Car, choosedModel: CarModel)?) -> Void) {
+    func getCarInfo(for modelName: String, completion: @escaping (CarInfo?) -> Void) {
         let components = modelName.components(separatedBy: " ")
         guard components.count == 2,
               let brand = components.first?.lowercased(),
