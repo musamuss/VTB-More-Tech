@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @Binding var carInfo: CarInfo?
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 0.0) {
             CardViewPreview()
@@ -32,11 +34,5 @@ struct MainView: View {
         }
         .background(Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1)))
         .edgesIgnoringSafeArea(.bottom)
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }
