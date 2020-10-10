@@ -36,6 +36,7 @@
 		A543E2AA2530C88B0096C4F0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E2A92530C88B0096C4F0 /* API.swift */; };
 		A57A85982531921100F11CBD /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A85972531921100F11CBD /* CameraController.swift */; };
 		A57A859C2531A6CE00F11CBD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A859B2531A6CE00F11CBD /* MainView.swift */; };
+		A5E2804C2531E2740011600D /* CameraProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E2804B2531E2740011600D /* CameraProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		A543E2A92530C88B0096C4F0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A57A85972531921100F11CBD /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		A57A859B2531A6CE00F11CBD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A5E2804B2531E2740011600D /* CameraProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				A52187912531877E00176AC4 /* CameraView.swift */,
+				A5E2804B2531E2740011600D /* CameraProgress.swift */,
 				A521879825318A0D00176AC4 /* CameraPreviewView.swift */,
 				A57A85972531921100F11CBD /* CameraController.swift */,
 			);
@@ -339,6 +342,7 @@
 				A52187922531877F00176AC4 /* CameraView.swift in Sources */,
 				73352EF02531E339007847CB /* VTBSlider.swift in Sources */,
 				A5077AEA2530E99B00666011 /* TransportType.swift in Sources */,
+				A5E2804C2531E2740011600D /* CameraProgress.swift in Sources */,
 				2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */,
 				73352EF22531E38B007847CB /* Extensions.swift in Sources */,
 				73D1AA9B2530D72A00A4E08F /* CreditCard.swift in Sources */,

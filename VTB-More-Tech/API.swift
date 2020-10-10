@@ -11,7 +11,8 @@ import UIKit
 import Combine
 
 enum APIError: Error {
-    case apiError
+    case carModelNameError
+    case carInfoError
 }
 
 typealias CarInfo = (car: Car, choosedModel: CarModel)
@@ -26,7 +27,7 @@ class API {
         let future = Future<[String: Double], APIError> { [unowned self] promise in
             self.recognizeCarModelName(from: image) { propabilities in
                 if propabilities.isEmpty {
-                    promise(.failure(.apiError))
+                    promise(.failure(.carModelNameError))
                 } else {
                     promise(.success(propabilities))
                 }
@@ -43,7 +44,7 @@ class API {
                 if let carInfo = carInfo {
                     promise(.success(carInfo))
                 } else {
-                    promise(.failure(.apiError))
+                    promise(.failure(.carInfoError))
                 }
             }
         }
@@ -104,7 +105,7 @@ class API {
                 let cars = decodedData["list"]
                 
                 guard let car = cars?.first(where: { $0.alias?.lowercased() == brand }),
-                      let model = car.models?.first(where: { $0.title?.lowercased() == model }) else {
+                      let model = car.models?.first(where: { $0.title?.lowercased() == model }) ?? car.models?.first else {
                     completion(nil)
                     return
                 }

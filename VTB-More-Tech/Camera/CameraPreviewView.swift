@@ -12,14 +12,27 @@ import SwiftUI
 import UIKit
 
 struct CameraPreview: UIViewRepresentable {
+    @Binding var needPhoto: Bool
     @Binding var photo: UIImage?
-
+    
+    let photoClosure: (UIImage) -> Void
+    
     func makeUIView(context: Context) -> CameraPreviewView {
         CameraPreviewView()
     }
     
     func updateUIView(_ uiView: CameraPreviewView, context: Context) {
-        // TODO: Handle this
+        if needPhoto {
+            uiView.takePhoto { photo in
+
+                if let photo = photo {
+                    self.photoClosure(photo)
+                }
+
+                self.needPhoto = false
+                self.photo = photo
+            }
+        }
     }
 }
 
