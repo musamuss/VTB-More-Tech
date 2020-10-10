@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import Alamofire
 
 struct CardViewPreview: UIViewRepresentable {
     @Binding var carInfo: CarInfo?
@@ -36,9 +37,9 @@ class CardView: UIView {
             //тут надо править данные
             carName.text = "\(model?.car.title ?? "") \(model?.choosedModel.model?.titleRus ?? "")"
             carDescription.text = "Модель: \(model?.car.country?.title ?? "")"
-            price.text = "Цена: \(model?.car.currentCarCount ?? 0)"
-            //тут должно быть фото получаемое
-            //carImage.image = model?.choosedModel.sizesPhotos
+            price.text = "Цена: \(model?.choosedModel.minprice ?? 0)"
+            request(model?.choosedModel.photo ?? "")
+            
         }
     }
     
@@ -59,5 +60,18 @@ class CardView: UIView {
         self.layer.cornerRadius = 8
         self.layer.masksToBounds = true
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    func request(_ str: String) {
+        AF.request(str,method: .get).response { response in
+
+         switch response.result {
+          case .success(let responseData):
+            self.carImage.image =  UIImage(data: responseData!, scale:1)
+
+          case .failure(let error):
+              print("error--->",error)
+          }
+      }
     }
 }
