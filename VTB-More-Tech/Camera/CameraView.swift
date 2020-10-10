@@ -19,7 +19,7 @@ struct CameraView: View {
                 Spacer()
                 Button(action: {
                     print("Чпок")
-                    isPresented = true
+                    self.isPresented.toggle()
                 }, label: {
                     Text("Чпок")
                 })
