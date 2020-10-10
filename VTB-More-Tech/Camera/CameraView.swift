@@ -42,12 +42,13 @@ struct CameraView: View {
                         self.apiRequestLoading = false
                     })
             }
-            .background(Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1)))
+            .background(Gradient.vtbGradient)
             .edgesIgnoringSafeArea(.vertical)
             VStack {
+                Image("vtb_logo")
+                    .padding(.top, 16)
                 Text("Сфотографируйте машину")
                     .foregroundColor(.white)
-                    .padding(.top, 24)
                     .font(.headline)
                 Spacer()
                 CameraProgress(isLoading: $apiRequestLoading)

@@ -24,7 +24,7 @@ struct CreditCard: View {
                     Image("vtb_logo")
                         .aspectRatio(contentMode: .fit)
                 }
-                Text("\((secondValue - firstValue)/12) ₽ / месяц")
+                Text("\(max(0,(secondValue - firstValue)/12)) ₽ / месяц")
                     .fontWeight(.bold)
                     .font(.system(size: 24))
                     .foregroundColor(.white)

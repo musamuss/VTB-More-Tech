@@ -37,7 +37,7 @@ struct MainView: View {
                 CreditCard(firstValue: 0, secondValue: 0)
             }
         }
-        .background(Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1)))
+        .background(Gradient.vtbGradient)
         .edgesIgnoringSafeArea(.bottom)
     }
 }
