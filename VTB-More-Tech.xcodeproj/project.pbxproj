@@ -29,7 +29,11 @@
 		A5077AF62530E99B00666011 /* CarBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE42530E99B00666011 /* CarBody.swift */; };
 		A5077AF72530E99B00666011 /* CarPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE52530E99B00666011 /* CarPhoto.swift */; };
 		A5077AF92530E99B00666011 /* CarBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5077AE72530E99B00666011 /* CarBrand.swift */; };
+		A52187922531877F00176AC4 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52187912531877E00176AC4 /* CameraView.swift */; };
+		A521879925318A0D00176AC4 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521879825318A0D00176AC4 /* CameraPreviewView.swift */; };
 		A543E2AA2530C88B0096C4F0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E2A92530C88B0096C4F0 /* API.swift */; };
+		A57A85982531921100F11CBD /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A85972531921100F11CBD /* CameraController.swift */; };
+		A57A859C2531A6CE00F11CBD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A859B2531A6CE00F11CBD /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +63,11 @@
 		A5077AE42530E99B00666011 /* CarBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBody.swift; sourceTree = "<group>"; };
 		A5077AE52530E99B00666011 /* CarPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhoto.swift; sourceTree = "<group>"; };
 		A5077AE72530E99B00666011 /* CarBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBrand.swift; sourceTree = "<group>"; };
+		A52187912531877E00176AC4 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		A521879825318A0D00176AC4 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		A543E2A92530C88B0096C4F0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A57A85972531921100F11CBD /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		A57A859B2531A6CE00F11CBD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +132,12 @@
 			children = (
 				A5077AD52530E98400666011 /* Models */,
 				A543E2A92530C88B0096C4F0 /* API.swift */,
+				A52187962531885900176AC4 /* Camera */,
 				2D978B282530D703003D2CF7 /* CarCollectionView */,
 				84DB79AB2530AFF300B41C01 /* AppDelegate.swift */,
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
 				84DB79AF2530AFF300B41C01 /* ViewController.swift */,
+				A57A859B2531A6CE00F11CBD /* MainView.swift */,
 				842ECBCA2530D66500AF0886 /* CardView */,
 				84DB79B12530AFF300B41C01 /* Main.storyboard */,
 				84DB79B42530AFF700B41C01 /* Assets.xcassets */,
@@ -153,6 +163,16 @@
 				A5077AE52530E99B00666011 /* CarPhoto.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A52187962531885900176AC4 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				A52187912531877E00176AC4 /* CameraView.swift */,
+				A521879825318A0D00176AC4 /* CameraPreviewView.swift */,
+				A57A85972531921100F11CBD /* CameraController.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		D5FD3CD1C4F0432C509E34CB /* Frameworks */ = {
@@ -287,15 +307,19 @@
 				84DB79AC2530AFF300B41C01 /* AppDelegate.swift in Sources */,
 				A5077AF62530E99B00666011 /* CarBody.swift in Sources */,
 				A5077AED2530E99B00666011 /* CarModel.swift in Sources */,
+				A521879925318A0D00176AC4 /* CameraPreviewView.swift in Sources */,
+				A57A85982531921100F11CBD /* CameraController.swift in Sources */,
 				A5077AF12530E99B00666011 /* CarRenderPhotos.swift in Sources */,
 				A5077AF92530E99B00666011 /* CarBrand.swift in Sources */,
 				A5077AF02530E99B00666011 /* SizePhoto.swift in Sources */,
 				A5077AF72530E99B00666011 /* CarPhoto.swift in Sources */,
 				A543E2AA2530C88B0096C4F0 /* API.swift in Sources */,
+				A52187922531877F00176AC4 /* CameraView.swift in Sources */,
 				A5077AEA2530E99B00666011 /* TransportType.swift in Sources */,
 				2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */,
 				84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */,
 				2D978B2A2530D738003D2CF7 /* SwiftUIView.swift in Sources */,
+				A57A859C2531A6CE00F11CBD /* MainView.swift in Sources */,
 				842ECBC52530D61200AF0886 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,11 @@
 
 import Alamofire
 import UIKit
+import Combine
 
 class API {
     static let current = API()
-    
+        
     func recognizeCar(from image: UIImage, completion: @escaping ([String: Double]) -> Void) {
         guard let base64Image = image.jpegData(compressionQuality: 0.25)?.base64EncodedData(options: .endLineWithLineFeed),
               let base64String = String(data: base64Image, encoding: .utf8) else {
@@ -72,6 +73,8 @@ class API {
             }
     }
     
+    // MARK: Private
+    
     private let baseURL = URL(string: "https://gw.hackathon.vtb.ru/vtb/hackathon")!
     
     private var headers: [String: String] {
@@ -83,7 +86,7 @@ class API {
     }
     
     private var afHeaders: HTTPHeaders {
-        let items = headers.keys.map{ name in
+        let items = headers.keys.map { name in
             HTTPHeader(name: name, value: headers[name]!)
         }
         
