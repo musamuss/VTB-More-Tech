@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct CameraView: View {
+    @State var isPresented = false
+    
     var body: some View {
         ZStack {
             CameraPreview()
@@ -17,11 +19,14 @@ struct CameraView: View {
                 Spacer()
                 Button(action: {
                     print("Чпок")
+                    isPresented = true
                 }, label: {
                     Text("Чпок")
                 })
             }
-        }
+        }.sheet(isPresented: $isPresented, content: {
+            MainView()
+        })
     }
 }
 

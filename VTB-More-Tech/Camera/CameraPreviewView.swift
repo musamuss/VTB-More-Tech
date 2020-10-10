@@ -21,73 +21,41 @@ struct CameraPreview: UIViewRepresentable {
     }
 }
 
-class CameraPreviewView: UIView, AVCaptureVideoDataOutputSampleBufferDelegate {
+class CameraPreviewView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        commonInit()
+        configureCameraController()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        commonInit()
+        configureCameraController()
     }
+    
+    func takePhoto(completion: @escaping (UIImage?) -> Void) {
+        cameraController.captureImage { image, error in
+            if let error = error {
+                print(error)
+            }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        previewLayer.frame = bounds
+            completion(image)
+        }
     }
     
     // MARK: Private
+
+    private let cameraController = CameraController()
     
-    private lazy var videoDataOutput: AVCaptureVideoDataOutput = {
-        let v = AVCaptureVideoDataOutput()
-        v.alwaysDiscardsLateVideoFrames = true
-        v.setSampleBufferDelegate(self, queue: videoDataOutputQueue)
-        v.connection(with: .video)?.isEnabled = true
-        return v
-    }()
-
-    private let videoDataOutputQueue: DispatchQueue = DispatchQueue(label: "JKVideoDataOutputQueue")
-    private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
-        let l = AVCaptureVideoPreviewLayer(session: session)
-        l.videoGravity = .resizeAspect
-        return l
-    }()
-
-    private let captureDevice: AVCaptureDevice? = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
-    private lazy var session: AVCaptureSession = {
-        let s = AVCaptureSession()
-        s.sessionPreset = .high
-        return s
-    }()
-
-    private func commonInit() {
-        contentMode = .scaleAspectFit
-        beginSession()
-    }
-
-    private func beginSession() {
-        do {
-            guard let captureDevice = captureDevice else {
-                fatalError("Camera doesn't work on the simulator! You have to test this on an actual device!")
+    private func configureCameraController() {
+        cameraController.prepare {(error) in
+            if let error = error {
+                print(error)
             }
-            let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
-            if session.canAddInput(deviceInput) {
-                session.addInput(deviceInput)
-            }
-
-            if session.canAddOutput(videoDataOutput) {
-                session.addOutput(videoDataOutput)
-            }
-            layer.masksToBounds = true
-            layer.addSublayer(previewLayer)
-            previewLayer.frame = bounds
-            session.startRunning()
-        } catch let error {
-            debugPrint("\(self.self): \(#function) line: \(#line).  \(error.localizedDescription)")
+            
+            try? self.cameraController.displayPreview(on: self)
         }
     }
 }

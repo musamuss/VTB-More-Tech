@@ -115,3 +115,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+*.xcuserstate
+/VTB-More-Tech.xcworkspace/xcuserdata/bestk1ng.xcuserdatad/UserInterfaceState.xcuserstate
+/VTB-More-Tech.xcworkspace/xcuserdata/bestk1ng.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
