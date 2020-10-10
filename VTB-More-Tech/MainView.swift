@@ -12,13 +12,17 @@ struct MainView: View {
     @Binding var carInfo: CarInfo?
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach (0 ..< 3) { _ in
-                    Spacer()
-                    CarCollectionView()
+        VStack {
+            CardViewPreview().frame(height: 281)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach (0 ..< 3) { _ in
+                        Spacer()
+                        CarCollectionView()
+                    }
                 }
             }
+            Spacer()
         }
     }
 }

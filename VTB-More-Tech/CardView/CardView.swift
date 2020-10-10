@@ -7,6 +7,17 @@
 //
 
 import UIKit
+import SwiftUI
+
+struct CardViewPreview: UIViewRepresentable {
+    func makeUIView(context: Context) -> CardView {
+        CardView()
+    }
+    
+    func updateUIView(_ uiView: CardView, context: Context) {
+       
+    }
+}
 
 class CardView: UIView {
 
@@ -24,8 +35,17 @@ class CardView: UIView {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    func commonInit() {
         self.contentView = UINib(nibName: "CardView", bundle: nil).instantiate(withOwner: self, options:nil)[0] as?  UIView
         self.contentView?.frame = self.bounds
         self.addSubview(self.contentView!)
