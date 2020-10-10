@@ -11,7 +11,7 @@ import SwiftUI
 struct CarCollectionView: View {
     var body: some View {
         ZStack {
-            Image("bmw")
+            Image("test")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)
