@@ -51,7 +51,7 @@ struct CreditCard: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 26)
         }
-        .frame(height: 600)
+        .frame(height: 430)
         .background(Color(#colorLiteral(red: 0.1875175834, green: 0.2722267807, blue: 0.3311970234, alpha: 1)))
         .cornerRadius(8)
         .padding(16)
