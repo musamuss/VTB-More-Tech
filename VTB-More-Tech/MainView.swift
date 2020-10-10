@@ -10,18 +10,28 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
-            CardViewPreview().frame(height: 281)
+        VStack (alignment: .leading, spacing: 0.0) {
+            CardViewPreview()
+                .frame(height: 281)
+                .padding(.horizontal, 16)
+                .padding(.top, 16)
+            Text("Рекомендации")
+                .font(.system(size: 24, weight: .regular))
+                .foregroundColor(.white)
+                .padding(.leading, 16)
+                .padding(.top, 38)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach (0 ..< 3) { _ in
-                        Spacer()
+                        Spacer(minLength: 16)
                         CarCollectionView()
                     }
                 }
             }
             Spacer()
         }
+        .background(Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1)))
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

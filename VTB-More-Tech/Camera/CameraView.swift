@@ -13,20 +13,25 @@ struct CameraView: View {
     
     var body: some View {
         ZStack {
+            Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1))
+                .edgesIgnoringSafeArea(.vertical)
             CameraPreview()
-            VStack {
-                Text("Сфотографируйте машину")
-                Spacer()
-                Button(action: {
-                    print("Чпок")
-                    self.isPresented.toggle()
-                }, label: {
-                    Text("Чпок")
-                })
-            }
-        }.sheet(isPresented: $isPresented, content: {
-            MainView()
-        })
+                VStack {
+                    Text("Сфотографируйте машину")
+                        .foregroundColor(.white)
+                    Spacer()
+                    Button(action: {
+                        print("Чпок")
+                        self.isPresented.toggle()
+                    }, label: {
+                        Text("Чпок")
+                    })
+                }
+            .sheet(isPresented: $isPresented, content: {
+                MainView()
+            })
+
+        }
     }
 }
 
