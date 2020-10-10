@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="VTB_More_Tech" customModuleProvider="target">
             <connections>
                 <outlet property="carDescription" destination="h4d-Gf-ik7" id="VJk-rb-vGN"/>
-                <outlet property="carImage" destination="0YO-Lv-2og" id="olp-8a-YWd"/>
                 <outlet property="carName" destination="jcF-Ms-K28" id="puu-De-KXw"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="J1o-O8-aFh"/>
                 <outlet property="price" destination="y7R-hq-rVh" id="PIs-hE-IyI"/>
@@ -17,35 +16,29 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="281"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="54"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bmw" translatesAutoresizingMaskIntoConstraints="NO" id="0YO-Lv-2og">
-                    <rect key="frame" x="0.0" y="0.0" width="343" height="211"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="211" id="6vW-xC-iE9"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAZDA 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-Ms-K28">
-                    <rect key="frame" x="16" y="227" width="65" height="17"/>
+                    <rect key="frame" x="16" y="0.0" width="65" height="17"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-Gf-ik7">
-                    <rect key="frame" x="122" y="227" width="205" height="17"/>
+                    <rect key="frame" x="122" y="0.0" width="205" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена: мульен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7R-hq-rVh">
-                    <rect key="frame" x="122" y="254" width="91.5" height="17"/>
+                    <rect key="frame" x="122" y="27" width="91.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.59999999999999998" green="0.61960784310000006" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="eQZ-rj-n6U">
-                    <rect key="frame" x="16" y="254" width="86" height="17"/>
+                    <rect key="frame" x="16" y="27" width="86" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="86" id="9cc-6c-pan"/>
                         <constraint firstAttribute="height" constant="17" id="pqU-Mf-VMI"/>
@@ -54,26 +47,22 @@
             </subviews>
             <color key="backgroundColor" red="0.14901960784313725" green="0.24705882352941178" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="0YO-Lv-2og" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0RE-Sz-cLy"/>
                 <constraint firstItem="eQZ-rj-n6U" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="0wa-Z7-LbY"/>
                 <constraint firstItem="eQZ-rj-n6U" firstAttribute="centerY" secondItem="y7R-hq-rVh" secondAttribute="centerY" id="3bl-cV-HyS"/>
-                <constraint firstAttribute="trailing" secondItem="0YO-Lv-2og" secondAttribute="trailing" id="84X-gA-CXj"/>
-                <constraint firstItem="0YO-Lv-2og" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bhz-c9-Pbr"/>
-                <constraint firstItem="jcF-Ms-K28" firstAttribute="top" secondItem="0YO-Lv-2og" secondAttribute="bottom" constant="16" id="OzZ-dC-hec"/>
                 <constraint firstItem="h4d-Gf-ik7" firstAttribute="centerY" secondItem="jcF-Ms-K28" secondAttribute="centerY" id="Prk-Mo-7Ub"/>
                 <constraint firstItem="jcF-Ms-K28" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="U2c-wm-s0S"/>
                 <constraint firstAttribute="bottom" secondItem="eQZ-rj-n6U" secondAttribute="bottom" constant="10" id="UGj-EK-bJS"/>
                 <constraint firstItem="y7R-hq-rVh" firstAttribute="top" secondItem="h4d-Gf-ik7" secondAttribute="bottom" constant="10" id="Wgt-Lv-SNv"/>
                 <constraint firstItem="h4d-Gf-ik7" firstAttribute="leading" secondItem="y7R-hq-rVh" secondAttribute="leading" id="ZDu-bW-nzG"/>
+                <constraint firstItem="jcF-Ms-K28" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZhC-Pr-glX"/>
                 <constraint firstItem="y7R-hq-rVh" firstAttribute="leading" secondItem="eQZ-rj-n6U" secondAttribute="trailing" constant="20" id="eXo-gi-dIa"/>
                 <constraint firstAttribute="trailing" secondItem="h4d-Gf-ik7" secondAttribute="trailing" constant="16" id="fGz-hS-fju"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-134.05797101449275" y="221.98660714285714"/>
+            <point key="canvasLocation" x="-134.05797101449275" y="305.35714285714283"/>
         </view>
     </objects>
     <resources>
-        <image name="bmw" width="1840" height="1040"/>
         <image name="stars" width="86" height="17"/>
     </resources>
 </document>

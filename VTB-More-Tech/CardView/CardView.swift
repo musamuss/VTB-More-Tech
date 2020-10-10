@@ -38,7 +38,7 @@ class CardView: UIView {
             carName.text = "\(model?.car.title ?? "") \(model?.choosedModel.model?.titleRus ?? "")"
             carDescription.text = "Модель: \(model?.car.country?.title ?? "")"
             price.text = "Цена: \(model?.choosedModel.minprice ?? 0)"
-            request(model?.choosedModel.photo ?? "")
+            //request(model?.choosedModel.photo ?? "")
             
         }
     }
@@ -57,9 +57,13 @@ class CardView: UIView {
         self.contentView = UINib(nibName: "CardView", bundle: nil).instantiate(withOwner: self, options:nil)[0] as?  UIView
         self.contentView?.frame = self.bounds
         self.addSubview(self.contentView!)
-        self.layer.cornerRadius = 8
         self.layer.masksToBounds = true
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        self.roundCorners([.bottomLeft, .bottomRight], radius: 8)
     }
     
     func request(_ str: String) {
@@ -74,4 +78,15 @@ class CardView: UIView {
           }
       }
     }
+}
+
+extension UIView {
+
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+         let mask = CAShapeLayer()
+         mask.path = path.cgPath
+         self.layer.mask = mask
+    }
+
 }
