@@ -13,7 +13,7 @@ struct MainView: View {
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0.0) {
-            CardViewPreview()
+            CardViewPreview(carInfo: $carInfo)
                 .frame(height: 281)
                 .padding(.horizontal, 16)
                 .padding(.top, 16)

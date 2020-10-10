@@ -10,8 +10,11 @@ import UIKit
 import SwiftUI
 
 struct CardViewPreview: UIViewRepresentable {
+    @Binding var carInfo: CarInfo?
     func makeUIView(context: Context) -> CardView {
-        CardView()
+        let card = CardView()
+        card.model = carInfo
+        return card
     }
     
     func updateUIView(_ uiView: CardView, context: Context) {
@@ -26,12 +29,16 @@ class CardView: UIView {
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carDescription: UILabel!
     @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var carImage: UIImageView!
     
-    var model: Array<String>? {
+    var model: CarInfo? {
         didSet {
-            carName.text = model?[0]
-            carDescription.text = "Модель: " + (model?[1] ?? "")
-            price.text = "Цена: " + (model?[2] ?? "")
+            //тут надо править данные
+            carName.text = "\(model?.car.title ?? "") \(model?.choosedModel.model?.titleRus ?? "")"
+            carDescription.text = "Модель: \(model?.car.country?.title ?? "")"
+            price.text = "Цена: \(model?.car.currentCarCount ?? 0)"
+            //тут должно быть фото получаемое
+            //carImage.image = model?.choosedModel.sizesPhotos
         }
     }
     
