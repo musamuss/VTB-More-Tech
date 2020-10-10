@@ -72,6 +72,8 @@ class API {
             }
     }
     
+    // MARK: Private
+    
     private let baseURL = URL(string: "https://gw.hackathon.vtb.ru/vtb/hackathon")!
     
     private var headers: [String: String] {
