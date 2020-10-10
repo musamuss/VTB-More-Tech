@@ -101,6 +101,7 @@
 		73D1AA982530D48D00A4E08F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				842ECBCA2530D66500AF0886 /* CardView */,
 				73D1AA992530D4AF00A4E08F /* components */,
 				73352EF12531E38B007847CB /* Extensions.swift */,
 			);
@@ -128,6 +129,7 @@
 		842ECBCA2530D66500AF0886 /* CardView */ = {
 			isa = PBXGroup;
 			children = (
+				84F1281D253224D0003EDE8B /* CardView2.swift */,
 				842ECBC42530D61200AF0886 /* CardView.swift */,
 				842ECBC72530D65800AF0886 /* CardView.xib */,
 			);
@@ -164,8 +166,6 @@
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
 				84DB79AF2530AFF300B41C01 /* ViewController.swift */,
 				A57A859B2531A6CE00F11CBD /* MainView.swift */,
-				84F1281D253224D0003EDE8B /* CardView2.swift */,
-				842ECBCA2530D66500AF0886 /* CardView */,
 				84DB79B12530AFF300B41C01 /* Main.storyboard */,
 				84DB79B42530AFF700B41C01 /* Assets.xcassets */,
 				84DB79B62530AFF700B41C01 /* LaunchScreen.storyboard */,

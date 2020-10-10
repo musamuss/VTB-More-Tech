@@ -38,7 +38,6 @@ class CardView: UIView {
             carName.text = "\(model?.car.title ?? "") \(model?.choosedModel.model?.titleRus ?? "")"
             carDescription.text = "Модель: \(model?.car.country?.title ?? "")"
             price.text = "Цена: \(model?.choosedModel.minprice ?? 0)"
-            //request(model?.choosedModel.photo ?? "")
             
         }
     }
@@ -64,19 +63,6 @@ class CardView: UIView {
         super.layoutSubviews()
 
         self.roundCorners([.bottomLeft, .bottomRight], radius: 8)
-    }
-    
-    func request(_ str: String) {
-        AF.request(str,method: .get).response { response in
-
-         switch response.result {
-          case .success(let responseData):
-            self.carImage.image =  UIImage(data: responseData!, scale:1)
-
-          case .failure(let error):
-              print("error--->",error)
-          }
-      }
     }
 }
 
