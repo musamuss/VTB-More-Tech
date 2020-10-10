@@ -30,8 +30,7 @@ struct CreditCard: View {
             .padding(.horizontal, 16)
             Column(spacing: 36) {
                 VTBSlider(title: "Первоначальный взнос", prefix: "₽", maxValue: 7_000_000)
-                VTBSlider(title: "Первоначальный взнос", prefix: "₽", maxValue: 7_000_000)
-                VTBSlider(title: "Срок кредита", prefix: "₽", maxValue: 7_000_000)
+                VTBSlider(title: "Сумма кредита", prefix: "₽", maxValue: 7_000_000)
             }
             .padding(.horizontal, 16)
             Spacer()
