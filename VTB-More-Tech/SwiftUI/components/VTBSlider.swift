@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct VTBSlider: View {
+    @Binding var currenValue: Int
     
     var title: String
     var prefix: String
@@ -52,6 +53,7 @@ struct VTBSlider: View {
                                         
                                         if value.location.x > 0 || value.location.x < maxWidth {
                                             sliderWidth = value.location.x
+                                            currenValue = Int(sliderWidth / maxWidth * maxValue)
                                         }
                                     })
                             )
@@ -70,8 +72,8 @@ struct VTBSlider: View {
     
 }
 
-struct VTBSlider_Previews: PreviewProvider {
-    static var previews: some View {
-        VTBSlider(title: "Первоначальный взнос", prefix: "₽", maxValue: 7_000_000)
-    }
-}
+//struct VTBSlider_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VTBSlider(currenValue: 0, title: "Первоначальный взнос", prefix: "₽", maxValue: 7_000_000)
+//    }
+//}

@@ -10,6 +10,9 @@ import SwiftUI
 
 struct CreditCard: View {
     
+    @State var firstValue: Int
+    @State var secondValue: Int
+    
     var body: some View {
         Column(spacing: 0) {
             Column(alignment: .leading, spacing: 8) {
@@ -21,7 +24,7 @@ struct CreditCard: View {
                     Image("vtb_logo")
                         .aspectRatio(contentMode: .fit)
                 }
-                Text("6 990 000 ₽ / месяц")
+                Text("\((secondValue - firstValue)/12) ₽ / месяц")
                     .fontWeight(.bold)
                     .font(.system(size: 24))
                     .foregroundColor(.white)
@@ -29,8 +32,8 @@ struct CreditCard: View {
             .padding(.vertical, 30)
             .padding(.horizontal, 16)
             Column(spacing: 36) {
-                VTBSlider(title: "Первоначальный взнос", prefix: "₽", maxValue: 7_000_000)
-                VTBSlider(title: "Сумма кредита", prefix: "₽", maxValue: 7_000_000)
+                VTBSlider(currenValue: $firstValue, title: "Первоначальный взнос", prefix: "₽", maxValue: 7_000_000)
+                VTBSlider(currenValue: $secondValue, title: "Сумма кредита", prefix: "₽", maxValue: 7_000_000)
             }
             .padding(.horizontal, 16)
             Spacer()
@@ -60,6 +63,6 @@ struct CreditCard: View {
 
 struct CreditCard_Previews: PreviewProvider {
     static var previews: some View {
-        CreditCard()
+        CreditCard(firstValue: 0, secondValue: 0)
     }
 }
