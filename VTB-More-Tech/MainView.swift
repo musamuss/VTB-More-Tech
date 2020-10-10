@@ -12,25 +12,30 @@ struct MainView: View {
     @Binding var carInfo: CarInfo?
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 0.0) {
-            CardViewPreview()
-                .frame(height: 281)
-                .padding(.horizontal, 16)
-                .padding(.top, 16)
-            Text("Рекомендации")
-                .font(.system(size: 24, weight: .regular))
-                .foregroundColor(.white)
-                .padding(.leading, 16)
-                .padding(.top, 38)
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach (0 ..< 3) { _ in
-                        Spacer(minLength: 16)
-                        CarCollectionView()
+        ScrollView(.vertical, showsIndicators: false) {
+            Column(alignment: .leading) {
+                CardViewPreview(carInfo: $carInfo)
+                    .frame(height: 281)
+                    .padding(16)
+                Text("Рекомендации")
+                    .font(.system(size: 24, weight: .regular))
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach (0 ..< 3) { _ in
+                            Spacer(minLength: 16)
+                            CarCollectionView()
+                        }
                     }
                 }
+                Text("Купить в кредит")
+                    .font(.system(size: 24, weight: .regular))
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+                
+                CreditCard()
             }
-            Spacer()
         }
         .background(Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1)))
         .edgesIgnoringSafeArea(.bottom)
