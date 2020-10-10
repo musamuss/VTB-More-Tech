@@ -105,7 +105,7 @@ class API {
                 let cars = decodedData["list"]
                 
                 guard let car = cars?.first(where: { $0.alias?.lowercased() == brand }),
-                      let model = car.models?.first(where: { $0.title?.lowercased() == model }) else {
+                      let model = car.models?.first(where: { $0.title?.lowercased() == model }) ?? car.models?.first else {
                     completion(nil)
                     return
                 }

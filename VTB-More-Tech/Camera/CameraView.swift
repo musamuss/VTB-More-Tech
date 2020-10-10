@@ -41,24 +41,53 @@ struct CameraView: View {
                         self.mainNeedPresented = true
                         self.apiRequestLoading = false
                     })
-            }.edgesIgnoringSafeArea(.vertical)
+            }
+            .background(Color(#colorLiteral(red: 0.0862745098, green: 0.1764705882, blue: 0.2392156863, alpha: 1)))
+            .edgesIgnoringSafeArea(.vertical)
             VStack {
                 Text("Сфотографируйте машину")
+                    .foregroundColor(.white)
                     .padding(.top, 24)
                     .font(.headline)
                 Spacer()
                 CameraProgress(isLoading: $apiRequestLoading)
                 Spacer()
-                Button(action: {
-                    self.needPhoto = true
-                    self.apiRequestLoading = true
-                },
-                label: {
-                    Image(systemName: "camera.fill")
-                        .font(Font.system(.largeTitle))
-                })
-                .padding(.bottom, 24)
-                .foregroundColor(Color(#colorLiteral(red: 0, green: 0.6666666667, blue: 1, alpha: 1)))
+                VStack(spacing: 48) {
+                    Button(action: {
+                        self.photo = #imageLiteral(resourceName: "test")
+                        self.apiRequestLoading = true
+                        self.apiRequest = API.current.carModelName(from: self.photo!)
+                            .flatMap({ propabilities -> Future<CarInfo, APIError> in
+                                let model = propabilities
+                                    .max { a, b in a.value < b.value }!
+                                    .key
+                                
+                                return API.current.carInfo(for: model)
+                            })
+                            .sink(receiveCompletion: { error in
+                                print(error)
+                                self.apiRequestLoading = false
+                                self.alertNeedPresented = error != .finished
+                            }, receiveValue: { carInfo in
+                                self.carInfo = carInfo
+                                self.mainNeedPresented = true
+                                self.apiRequestLoading = false
+                            })
+                    }, label: {
+                        Image(systemName: "photo.fill")
+                            .font(Font.system(.largeTitle))
+                    })
+                    .foregroundColor(Color(#colorLiteral(red: 0.1882352941, green: 0.2705882353, blue: 0.3333333333, alpha: 1)))
+                    Button(action: {
+                        self.needPhoto = true
+                        self.apiRequestLoading = true
+                    }, label: {
+                        Image(systemName: "camera.fill")
+                            .font(Font.system(.largeTitle))
+                    })
+                    .padding(.bottom, 32)
+                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0.6666666667, blue: 1, alpha: 1)))
+                }
             }
         }
         .sheet(isPresented: $mainNeedPresented) {
