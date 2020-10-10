@@ -38,7 +38,6 @@ class CardView: UIView {
             carName.text = "\(model?.car.title ?? "") \(model?.choosedModel.model?.titleRus ?? "")"
             carDescription.text = "Модель: \(model?.car.country?.title ?? "")"
             price.text = "Цена: \(model?.choosedModel.minprice ?? 0)"
-            request(model?.choosedModel.photo ?? "")
             
         }
     }
@@ -57,21 +56,23 @@ class CardView: UIView {
         self.contentView = UINib(nibName: "CardView", bundle: nil).instantiate(withOwner: self, options:nil)[0] as?  UIView
         self.contentView?.frame = self.bounds
         self.addSubview(self.contentView!)
-        self.layer.cornerRadius = 8
         self.layer.masksToBounds = true
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    
-    func request(_ str: String) {
-        AF.request(str,method: .get).response { response in
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
-         switch response.result {
-          case .success(let responseData):
-            self.carImage.image =  UIImage(data: responseData!, scale:1)
-
-          case .failure(let error):
-              print("error--->",error)
-          }
-      }
+        self.roundCorners([.bottomLeft, .bottomRight], radius: 8)
     }
+}
+
+extension UIView {
+
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+         let mask = CAShapeLayer()
+         mask.path = path.cgPath
+         self.layer.mask = mask
+    }
+
 }
