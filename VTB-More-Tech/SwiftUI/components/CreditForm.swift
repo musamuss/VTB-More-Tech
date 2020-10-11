@@ -19,11 +19,11 @@ struct CreditForm: View {
         Stack {
             Color(#colorLiteral(red: 0.1875175834, green: 0.2722267807, blue: 0.3311970234, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 Column(alignment: .leading) {
                     Row {
                         Image("vtb_logo")
-                            .padding(.bottom, 40)
+                            .padding(.vertical, 40)
                         Spacer()
                     }
                     Column(alignment: .leading, spacing: 20) {
