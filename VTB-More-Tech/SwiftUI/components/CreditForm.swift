@@ -12,6 +12,7 @@ struct CreditForm: View {
     
     @State var fio: String = ""
     @State var birth: String = ""
+    @State var passport: String = ""
     @State var phone: String = ""
     @State var email: String = ""
     @State var isPresented = false
@@ -43,6 +44,7 @@ struct CreditForm: View {
                     }
                     Column(alignment: .leading, spacing: 30) {
                         VTBInput(type: .default, hint: "Фамилия Имя Отчество", footer: "Укажите так, как написано в вашем паспорте", input: $fio)
+                        VTBInput(type: .default, hint: "0000 000000", footer: "Укажите серию и номер паспорта", input: $passport)
                         VTBInput(type: .default, hint: "Дата рождения (дд.мм.гггг)", footer: "Укажите дату своего рождения", input: $birth)
                         VTBInput(type: .phonePad, hint: "Мобильный телефон", footer: "На этот номер мы вышлем вам СМС с решеним банка", input: $phone)
                         VTBInput(type: .emailAddress, hint: "Электронная почта", footer: "На эту почту вы получите дополнительную информацию по вашему автокредиту", input: $email)
