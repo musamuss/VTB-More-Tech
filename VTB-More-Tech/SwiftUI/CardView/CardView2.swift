@@ -73,7 +73,7 @@ struct CardView2: View {
                         .padding(.leading, 16)
                         Spacer()
                     }
-                    Text("Рекомендации")
+                    Text("Похожее")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.white)

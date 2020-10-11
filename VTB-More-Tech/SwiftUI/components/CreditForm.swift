@@ -14,6 +14,7 @@ struct CreditForm: View {
     @State var birth: String = ""
     @State var phone: String = ""
     @State var email: String = ""
+    @State var isPresented = false
     
     var body: some View {
         Stack {
@@ -47,7 +48,9 @@ struct CreditForm: View {
                         VTBInput(type: .emailAddress, hint: "Электронная почта", footer: "На эту почту вы получите дополнительную информацию по вашему автокредиту", input: $email)
                     }
                     .padding(.top, 40)
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        isPresented.toggle()
+                    }, label: {
                         Text("Подать заявку")
                             .font(.system(size: 18))
                             .foregroundColor(.white)
@@ -57,6 +60,9 @@ struct CreditForm: View {
                     .background(Color(#colorLiteral(red: 0.001224983018, green: 0.668161869, blue: 0.9994378686, alpha: 1)))
                     .cornerRadius(8)
                     .padding(.top, 16)
+                    .fullScreenCover(isPresented: $isPresented, content: {
+                        FinishScreen()
+                    })
                     Spacer()
                 }
             }
