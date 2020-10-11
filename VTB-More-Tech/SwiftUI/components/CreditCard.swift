@@ -12,6 +12,7 @@ struct CreditCard: View {
     
     @State var firstValue: Int
     @State var secondValue: Int
+    @State var isPresented = false
     
     var body: some View {
         Column(spacing: 0) {
@@ -42,7 +43,9 @@ struct CreditCard: View {
                     .font(.system(size: 12))
                     .foregroundColor(.white)
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    self.isPresented.toggle()
+                }, label: {
                     Text("Отправить заявку")
                         .font(.system(size: 12))
                         .foregroundColor(.white)
@@ -50,6 +53,9 @@ struct CreditCard: View {
                 .frame(width: 140, height: 40)
                 .background(Color(#colorLiteral(red: 0.001224983018, green: 0.668161869, blue: 0.9994378686, alpha: 1)))
                 .cornerRadius(7)
+                .sheet(isPresented: $isPresented) {
+                    CreditForm()
+                }
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 26)
