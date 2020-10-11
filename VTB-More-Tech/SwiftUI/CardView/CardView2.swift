@@ -45,7 +45,7 @@ struct CardView2: View {
                         Image("stars")
                             .padding(.leading, 16)
                         Spacer()
-                        Text("Цена: \((self.carInfo?.choosedModel.minprice)!) ₽")
+                        Text("Цена: \((self.carInfo?.choosedModel.minprice?.price)!)")
                             .padding(.horizontal)
                             .foregroundColor(Color.white)
                     }
