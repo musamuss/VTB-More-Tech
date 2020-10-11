@@ -20,11 +20,11 @@ struct CardView2: View {
         
         ZStack(alignment: .topTrailing) {
             
-            VStack {
+            VStack(alignment: .leading) {
                 
                 carImage
                     .resizable()
-                    .frame(height: self.hero ? 250 : 200)
+                    .frame(height: self.hero ? 300 : 250)
                     .cornerRadius(self.hero ? 0 : 25)
                 
                 
@@ -35,23 +35,60 @@ struct CardView2: View {
                         Text(("\(carInfo?.car.title ?? "") \(carInfo?.choosedModel.model?.titleRus ?? "")"))
                             .font(.title)
                             .fontWeight(.bold)
+                            .foregroundColor(Color.white)
                         
                         Spacer()
                     }
                     .padding()
                     
-                    Text((self.carInfo?.car.alias)!)
-                        .padding(.horizontal)
+                    Row {
+                        Image("stars")
+                            .padding(.leading, 16)
+                        Spacer()
+                        Text("Цена: \((self.carInfo?.choosedModel.minprice)!) ₽")
+                            .padding(.horizontal)
+                            .foregroundColor(Color.white)
+                    }
                     
                     HStack{
-                        
                         Text("Details")
                             .font(.title)
                             .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .padding(.leading, 16)
                         
                         Spacer()
                     }
-                    .padding()
+                    Row {
+                        Column(alignment: .leading, spacing: 8) {
+                            Text("Страна: \(self.carInfo?.car.country?.title ?? "")")
+                                .foregroundColor(Color.white)
+                            Text("Кузов: \(self.carInfo?.choosedModel.bodies?.first?.title ?? "")")
+                                .foregroundColor(Color.white)
+                            Text("Производитель: \(self.carInfo?.choosedModel.brand?.title ?? "")")
+                                .foregroundColor(Color.white)
+                            Text("Класс: \(carInfo?.choosedModel.transportType?.title ?? "")")
+                                .foregroundColor(Color.white)
+                        }
+                        .padding(.leading, 16)
+                        Spacer()
+                    }
+                    Text("Рекомендации")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.leading, 16)
+                        .padding(.top, 16)
+                        
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach (0 ..< 3) { _ in
+                                Spacer(minLength: 16)
+                                CarCollectionView()
+                            }
+                        }
+                    }
+                    
                 }
             }
             .padding(.horizontal, self.hero ? 0 : 16)
@@ -77,7 +114,7 @@ struct CardView2: View {
                         .clipShape(Circle())
                     
                 }
-                .padding(.top,48)
+                .padding(.top,84)
                 .padding(.trailing,10)
             }
         }

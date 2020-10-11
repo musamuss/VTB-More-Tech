@@ -36,8 +36,8 @@ class CardView: UIView {
         didSet {
             //тут надо править данные
             carName.text = "\(model?.car.title ?? "") \(model?.choosedModel.model?.titleRus ?? "")"
-            carDescription.text = "Модель: \(model?.car.country?.title ?? "")"
-            price.text = "Цена: \(model?.choosedModel.minprice ?? 0)"
+            carDescription.text = "Страна: \(model?.car.country?.title ?? "")"
+            price.text = "Цена: \(model?.choosedModel.minprice ?? 0) ₽"
             
         }
     }

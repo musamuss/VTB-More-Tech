@@ -53,7 +53,7 @@ struct MainView: View {
                         CardViewPreview(carInfo: $carInfo)
                             .frame(height: 64)
                             .padding(.horizontal, 16)
-                            .offset(y: 110)
+                            .offset(y: 130)
                     }
                     
                 }
@@ -63,7 +63,7 @@ struct MainView: View {
                     .font(.system(size: 24, weight: .regular))
                     .foregroundColor(.white)
                     .padding(.leading, 16)
-                    .padding(.top,54)
+                    .padding(.top,74)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach (0 ..< 3) { _ in
