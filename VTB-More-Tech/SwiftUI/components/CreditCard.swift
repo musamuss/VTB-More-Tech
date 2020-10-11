@@ -43,6 +43,7 @@ struct CreditCard: View {
                     .font(.system(size: 12))
                     .foregroundColor(.white)
                 Spacer()
+
                 Button(action: {
                     self.isPresented.toggle()
                 }, label: {
