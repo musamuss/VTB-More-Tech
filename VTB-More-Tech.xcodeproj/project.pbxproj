@@ -37,6 +37,7 @@
 		A543E2AA2530C88B0096C4F0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E2A92530C88B0096C4F0 /* API.swift */; };
 		A57A85982531921100F11CBD /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A85972531921100F11CBD /* CameraController.swift */; };
 		A57A859C2531A6CE00F11CBD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A859B2531A6CE00F11CBD /* MainView.swift */; };
+		A5DA12CD2532F0B6009F7A36 /* Int+Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA12CC2532F0B6009F7A36 /* Int+Price.swift */; };
 		A5E2804C2531E2740011600D /* CameraProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E2804B2531E2740011600D /* CameraProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		A543E2A92530C88B0096C4F0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A57A85972531921100F11CBD /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		A57A859B2531A6CE00F11CBD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A5DA12CC2532F0B6009F7A36 /* Int+Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Price.swift"; sourceTree = "<group>"; };
 		A5E2804B2531E2740011600D /* CameraProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 				84DB79AD2530AFF300B41C01 /* SceneDelegate.swift */,
 				84DB79AF2530AFF300B41C01 /* ViewController.swift */,
 				A57A859B2531A6CE00F11CBD /* MainView.swift */,
+				A5DA12CC2532F0B6009F7A36 /* Int+Price.swift */,
 				84DB79B12530AFF300B41C01 /* Main.storyboard */,
 				84DB79B42530AFF700B41C01 /* Assets.xcassets */,
 				84DB79B62530AFF700B41C01 /* LaunchScreen.storyboard */,
@@ -348,6 +351,7 @@
 				A5E2804C2531E2740011600D /* CameraProgress.swift in Sources */,
 				2D978B2D2530D756003D2CF7 /* CarCollectionView.swift in Sources */,
 				73352EF22531E38B007847CB /* Extensions.swift in Sources */,
+				A5DA12CD2532F0B6009F7A36 /* Int+Price.swift in Sources */,
 				73D1AA9B2530D72A00A4E08F /* CreditCard.swift in Sources */,
 				84DB79AE2530AFF300B41C01 /* SceneDelegate.swift in Sources */,
 				A57A859C2531A6CE00F11CBD /* MainView.swift in Sources */,
