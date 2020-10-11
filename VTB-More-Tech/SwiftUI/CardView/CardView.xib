@@ -26,13 +26,13 @@
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-Gf-ik7">
-                    <rect key="frame" x="122" y="0.0" width="205" height="17"/>
+                    <rect key="frame" x="235.5" y="0.0" width="91.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена: мульен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7R-hq-rVh">
-                    <rect key="frame" x="122" y="27" width="91.5" height="17"/>
+                    <rect key="frame" x="235.5" y="27" width="91.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.59999999999999998" green="0.61960784310000006" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -55,8 +55,9 @@
                 <constraint firstItem="y7R-hq-rVh" firstAttribute="top" secondItem="h4d-Gf-ik7" secondAttribute="bottom" constant="10" id="Wgt-Lv-SNv"/>
                 <constraint firstItem="h4d-Gf-ik7" firstAttribute="leading" secondItem="y7R-hq-rVh" secondAttribute="leading" id="ZDu-bW-nzG"/>
                 <constraint firstItem="jcF-Ms-K28" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZhC-Pr-glX"/>
-                <constraint firstItem="y7R-hq-rVh" firstAttribute="leading" secondItem="eQZ-rj-n6U" secondAttribute="trailing" constant="20" id="eXo-gi-dIa"/>
+                <constraint firstItem="y7R-hq-rVh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eQZ-rj-n6U" secondAttribute="trailing" constant="20" id="eXo-gi-dIa"/>
                 <constraint firstAttribute="trailing" secondItem="h4d-Gf-ik7" secondAttribute="trailing" constant="16" id="fGz-hS-fju"/>
+                <constraint firstAttribute="trailing" secondItem="y7R-hq-rVh" secondAttribute="trailing" constant="16" id="giO-mR-BfH"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-134.05797101449275" y="305.35714285714283"/>
