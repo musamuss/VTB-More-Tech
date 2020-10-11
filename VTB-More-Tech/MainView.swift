@@ -18,7 +18,7 @@ struct MainView: View {
             Column(alignment: .leading) {
                 Spacer()
                 Stack {
-                    GeometryReader{g in
+                    GeometryReader { g in
                         CardView2(carInfo: $carInfo, hero: self.$hero)
                             
                             // going to move view up how its down from top...

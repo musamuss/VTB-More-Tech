@@ -51,7 +51,7 @@ struct CarModel : Codable {
 		case id = "id"
 		case ownTitle = "ownTitle"
 		case brand = "brand"
-		case minprice = "minprice"
+		case minprice = "minPrice"
 		case hasSpecialPrice = "hasSpecialPrice"
 		case premiumPriceSpecials = "premiumPriceSpecials"
 		case count = "count"

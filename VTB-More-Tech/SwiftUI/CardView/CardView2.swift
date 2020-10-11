@@ -10,19 +10,17 @@ import Foundation
 import SwiftUI
 import Alamofire
 
-// card View...
-
-struct CardView2 : View {
+struct CardView2: View {
     
     @Binding var carInfo: CarInfo?
-    @Binding var hero : Bool
+    @Binding var hero: Bool
     @State var carImage: Image = Image("vtb_logo")
     
-    var body: some View{
+    var body: some View {
         
-        ZStack(alignment: .topTrailing){
+        ZStack(alignment: .topTrailing) {
             
-            VStack{
+            VStack {
                 
                 carImage
                     .resizable()
@@ -85,16 +83,16 @@ struct CardView2 : View {
         }
         .onAppear() {
             AF.request((carInfo?.choosedModel.photo)!,method: .get).response { response in
-
-             switch response.result {
-              case .success(let responseData):
-                let image = UIImage(data: responseData!, scale:1)
-                self.carImage = Image(uiImage: image!)
-
-              case .failure(let error):
-                  print("error--->",error)
-              }
-          }
+                
+                switch response.result {
+                case .success(let responseData):
+                    let image = UIImage(data: responseData!, scale:1)
+                    self.carImage = Image(uiImage: image!)
+                    
+                case .failure(let error):
+                    print("error--->",error)
+                }
+            }
         }
     }
 }

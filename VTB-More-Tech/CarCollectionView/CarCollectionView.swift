@@ -10,12 +10,12 @@ import SwiftUI
 
 struct CarCollectionView: View {
     var body: some View {
-        ZStack {
+        Stack {
             Image("test")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)
-            VStack (alignment: .leading) {
+            Column (alignment: .leading) {
                 Text("РОЛЬФ (Москва)")
                     .font(.system(size: 10, weight: .bold))
                     .foregroundColor(.white)
