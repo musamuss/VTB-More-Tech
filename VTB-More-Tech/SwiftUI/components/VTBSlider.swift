@@ -59,11 +59,17 @@ struct VTBSlider: View {
                             )
                     }
                     .frame(height: 25)
-                    Text("\(Int(sliderWidth / maxWidth * maxValue).formattedWithSeparator) \(prefix)")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(Color(#colorLiteral(red: 6.56245611e-05, green: 0.6601959467, blue: 0.9915047288, alpha: 1)))
-                        .font(.system(size: 18))
-                        .padding(.top, 10)
+                    Row {
+                        Text("\(Int(sliderWidth / maxWidth * maxValue).formattedWithSeparator) \(prefix)")
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(Color(#colorLiteral(red: 6.56245611e-05, green: 0.6601959467, blue: 0.9915047288, alpha: 1)))
+                            .font(.system(size: 18))
+                        Spacer()
+                        Text("\( Int(sliderWidth / maxWidth * 100) ) %")
+                            .foregroundColor(Color(#colorLiteral(red: 0.6008395553, green: 0.6197888851, blue: 0.662752986, alpha: 1)))
+                            .font(.system(size: 18))
+                    }
+                    .padding(.top, 10)
                 }
             }
         }
